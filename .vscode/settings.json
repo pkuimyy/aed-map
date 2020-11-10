@@ -1,0 +1,6 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.pythonPath": "C:\\Users\\yang\\.virtualenvs\\aed-map-gMpN2mD5\\Scripts\\python.exe",
+    "python.formatting.provider": "autopep8"
+}
