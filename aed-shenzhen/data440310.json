@@ -1,0 +1,83 @@
+{
+    "count": 4,
+    "data": [
+        {
+            "ad_info": {
+                "adcode": 440310,
+                "city": "深圳市",
+                "district": "坪山区",
+                "province": "广东省"
+            },
+            "address": "广东省深圳市坪山区环兴一路",
+            "category": "医疗保健:其它医疗保健",
+            "id": "57495863577914494",
+            "location": {
+                "lat": 22.678456,
+                "lng": 114.340219
+            },
+            "tel": "",
+            "title": "AED",
+            "type": 0
+        },
+        {
+            "ad_info": {
+                "adcode": 440310,
+                "city": "深圳市",
+                "district": "坪山区",
+                "province": "广东省"
+            },
+            "address": "广东省深圳市坪山区深汕路坪山段339号大工业区体育中心网球中心前台左侧正面墙壁",
+            "category": "医疗保健:其它医疗保健",
+            "id": "7257920477406453012",
+            "location": {
+                "lat": 22.712782,
+                "lng": 114.350643
+            },
+            "tel": "",
+            "title": "AED",
+            "type": 0
+        },
+        {
+            "ad_info": {
+                "adcode": 440310,
+                "city": "深圳市",
+                "district": "坪山区",
+                "province": "广东省"
+            },
+            "address": "广东省深圳市坪山区双玺花园一期社康中心门口",
+            "category": "医疗保健:其它医疗保健",
+            "id": "15666206668781334023",
+            "location": {
+                "lat": 22.70786,
+                "lng": 114.34321
+            },
+            "tel": "",
+            "title": "AED",
+            "type": 0
+        },
+        {
+            "ad_info": {
+                "adcode": 440310,
+                "city": "深圳市",
+                "district": "坪山区",
+                "province": "广东省"
+            },
+            "address": "广东省深圳市坪山区坪山街道办体育一路坪山网球中心中心网球场二楼看台入口右侧墙壁",
+            "category": "医疗保健:其它医疗保健",
+            "id": "9545301780672872552",
+            "location": {
+                "lat": 22.675902,
+                "lng": 114.342103
+            },
+            "tel": "",
+            "title": "AED",
+            "type": 0
+        }
+    ],
+    "message": "query ok",
+    "region": {
+        "title": "坪山区"
+    },
+    "request_id": "1202361741553aad85e4c8534c71d606ed9a72cff4e5",
+    "status": 0
+}

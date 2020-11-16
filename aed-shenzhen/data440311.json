@@ -1,0 +1,65 @@
+{
+    "count": 3,
+    "data": [
+        {
+            "ad_info": {
+                "adcode": 440311,
+                "city": "深圳市",
+                "district": "光明区",
+                "province": "广东省"
+            },
+            "address": "广东省深圳市光明区光明街道光明大街150-6中心医院光明护理院2楼护理站对面墙壁",
+            "category": "医疗保健:其它医疗保健",
+            "id": "18353975720566482384",
+            "location": {
+                "lat": 22.76537,
+                "lng": 113.943294
+            },
+            "tel": "",
+            "title": "AED",
+            "type": 0
+        },
+        {
+            "ad_info": {
+                "adcode": 440311,
+                "city": "深圳市",
+                "district": "光明区",
+                "province": "广东省"
+            },
+            "address": "广东省深圳市光明区招商局光明科技园A3栋负一楼控制室门口边",
+            "category": "医疗保健:其它医疗保健",
+            "id": "3631091044971883462",
+            "location": {
+                "lat": 22.738017,
+                "lng": 113.946228
+            },
+            "tel": "",
+            "title": "AED",
+            "type": 0
+        },
+        {
+            "ad_info": {
+                "adcode": 440311,
+                "city": "深圳市",
+                "district": "光明区",
+                "province": "广东省"
+            },
+            "address": "广东省深圳市光明区碧眼路2号行政服务大厅一楼",
+            "category": "医疗保健:其它医疗保健",
+            "id": "7677228863646812359",
+            "location": {
+                "lat": 22.749999,
+                "lng": 113.937372
+            },
+            "tel": "",
+            "title": "AED",
+            "type": 0
+        }
+    ],
+    "message": "query ok",
+    "region": {
+        "title": "光明区"
+    },
+    "request_id": "120236174155795d4076f4d7636a9b956451c9ff80f6",
+    "status": 0
+}
