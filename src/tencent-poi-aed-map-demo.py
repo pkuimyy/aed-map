@@ -13,7 +13,7 @@ if __name__ == "__main__":
         "boundary": f"region({test_adcode},0)",
         "page_size": 20,
         "key": f"{key}",
-        "page_index": 1
+        "page_index": 1,
     }
     r = requests.get(base_url, params=url_params)
     print(r.json())
