@@ -16,6 +16,9 @@
 - 爬虫思路：
     - 腾讯位置服务API有返回数据数量的上限，为200 https://lbs.qq.com/FAQ/server_faq.html#1
     - 腾讯地图上显示AED共有303个，因此划分深圳市为各个区分别发送请求可以避开上述限制
-- 在根目录运行`python ./src/tencent-poi-aed-map.py`即可
+- 在根目录运行`python ./src/tencent-poi-aed-map-demo.py`即可
 
+## 深圳市POI地图
 
+- https://lbs.amap.com/api/webservice/guide/api/search
+- 在根目录运行`python ./src/gaode-poi-map.py`即可 
