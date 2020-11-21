@@ -59,6 +59,8 @@ class GaodePoiMap:
                 logging.error(f"gaode api fail: {info_code}")
             else:
                 page_num = req_json["count"]
+                logging.info(
+                    f"adcode: {adcode} poi: {poi}  page_num: {page_num}")
         except:
             logging.error("request fail")
         return page_num
@@ -73,10 +75,13 @@ class GaodePoiMap:
         logging.info("adcode and poi code load")
         task_list = [(a, p) for a in self.shenzhen_adcode_obj.values()
                      for p in self.gaode_poi_code_obj.values()]
+        page_num_list = []
         for adcode, poi in tqdm(task_list, ncols=70):
-            sleep(2)
+            sleep(1)
             page_num = self.get_page_num(adcode, poi)
-            print(page_num)
+            page_num_list.append(page_num)
+        with open("./tmp.txt", encoding="utf-8", mode="w") as f:
+            json.dump(page_num_list, f)
 
 
 if __name__ == "__main__":
