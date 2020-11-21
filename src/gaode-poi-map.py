@@ -22,6 +22,9 @@ class GaodePoiMap:
         self.gaode_poi_code_obj = None
         self.shenzhen_adcode_path = "./data/shenzhen-adcode.json"
         self.shenzhen_adcode_obj = None
+        self.db_path = "./data/aed-map.db"
+        self.db_conn = None
+        self.sleep_time = 1
 
         self.base_url = "https://restapi.amap.com/v3/place/text"
 
@@ -46,6 +49,9 @@ class GaodePoiMap:
         with open(self.shenzhen_adcode_path, encoding="utf-8", mode="r") as f:
             self.shenzhen_adcode_obj = json.load(f)
 
+    def connect_db(self):
+        self.db_conn = sqlite3.connect(self.db_path)
+
     def get_page_num(self, adcode, poi):
         url_params = self.url_params.copy()
         url_params["types"] = poi
@@ -66,22 +72,29 @@ class GaodePoiMap:
         return page_num
 
     def save_to_db(self, adcode, poi, page, req):
-        pass
+        cursor = self.db_conn.cursor()
+        req = json.dumps(req, ensure_ascii=False)
+        insert_sql = f"insert into test (adcode,poi,page,data) values ('{adcode}','{poi}',{page},'{req}')"
+        print(insert_sql)
+        cursor.execute(insert_sql)
+        self.db_conn.commit()
 
     def run(self):
         self.load_key()
         self.load_gaode_poi_code()
         self.load_shenzhen_adcode()
+        self.connect_db()
         logging.info("adcode and poi code load")
         task_list = [(a, p) for a in self.shenzhen_adcode_obj.values()
                      for p in self.gaode_poi_code_obj.values()]
         page_num_list = []
-        for adcode, poi in tqdm(task_list, ncols=70):
-            sleep(1)
-            page_num = self.get_page_num(adcode, poi)
-            page_num_list.append(page_num)
-        with open("./tmp.txt", encoding="utf-8", mode="w") as f:
-            json.dump(page_num_list, f)
+        # for adcode, poi in tqdm(task_list, ncols=70):
+        #     sleep(self.sleep_time)
+        #     page_num = self.get_page_num(adcode, poi)
+        with open("./tmp.json", encoding="utf-8", mode="r") as f:
+            tmp_req = json.load(f)
+        self.save_to_db("a1", "p1", "-1", tmp_req)
+        self.db_conn.close()
 
 
 if __name__ == "__main__":
